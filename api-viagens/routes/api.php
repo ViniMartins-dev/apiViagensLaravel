@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PassageiroController;
 use App\Http\Controllers\VooController;
+use App\Http\Controllers\PassagemController;
 
 //Rotas Passageiro
 Route::post('/passageiro', [PassageiroController::class,'store']);             //inserir um novo objeto
@@ -27,4 +28,5 @@ Route::put('/voo/{id}', [VooController::class,'update']);                       
 
 Route::delete('/voo/{id}', [VooController::class,'destroy']);                   //deletar um objeto da base de dados
 
-//Rotas especiais
+//Rota para pegar a relação entre passageiro e voo
+Route::get('/passagem/{id_passageiro}', [PassagemController::class,'show']);    //traz dados do passageiro e seu voo
