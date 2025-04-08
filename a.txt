@@ -1,0 +1,4 @@
+projeto da api de passagens aereas:
+
+tabela: passageiro e acompanhante
+
