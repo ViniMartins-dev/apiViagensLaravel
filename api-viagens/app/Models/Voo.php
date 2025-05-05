@@ -12,4 +12,9 @@ class Voo extends Model
         'horario',
         'portao_embarque'
     ];
+
+    public function passageiros()
+    {
+        return $this->belongsToMany(Passageiro::class, 'passagem_voo');
+    }
 }

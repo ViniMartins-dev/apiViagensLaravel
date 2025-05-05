@@ -18,3 +18,4 @@ Route::post('voo/store', [vooController::class, 'store'])->name('voo.store');
 Route::get('voo/edit/{id}', [vooController::class, 'edit'])->name('voo.edit');
 Route::post('voo/update/{id}', [vooController::class, 'update'])->name('voo.update');
 Route::get('voo/delete/{id}', [vooController::class, 'destroy'])->name('voo.destroy');
+

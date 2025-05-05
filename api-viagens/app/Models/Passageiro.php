@@ -12,4 +12,9 @@ class Passageiro extends Model
         'CPF',
         'idade',
     ];
+
+    public function voos()
+    {
+        return $this->belongsToMany(Voo::class, 'passagem');
+    }
 }
