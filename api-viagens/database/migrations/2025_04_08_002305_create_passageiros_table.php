@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('sobrenome');
             $table->string('CPF');
             $table->integer('idade');
-            $table->integer('id_voo');
             $table->timestamps();
         });
     }

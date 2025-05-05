@@ -11,6 +11,5 @@ class Passageiro extends Model
         'sobrenome',
         'CPF',
         'idade',
-        'id_voo'
     ];
 }

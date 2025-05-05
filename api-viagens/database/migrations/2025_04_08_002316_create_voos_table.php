@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('origem');
             $table->string('destino');
+            /* 2025-05-05 14:23:45 */
             $table->datetime('horario');
             $table->string('portao_embarque');
             $table->timestamps();

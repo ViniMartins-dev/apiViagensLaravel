@@ -38,7 +38,6 @@ class PassageiroController extends Controller
             'sobrenome' => 'required',
             'CPF' => 'required',
             'idade' => 'required',
-            'id_voo' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -100,7 +99,6 @@ class PassageiroController extends Controller
             'sobrenome' => 'required',
             'CPF' => 'required',
             'idade' => 'required',
-            'id_voo' => 'required',
         ]);;
 
         if ($validator->fails()) {
@@ -115,7 +113,6 @@ class PassageiroController extends Controller
         $regBook->sobrenome = $request->sobrenome;
         $regBook->CPF = $request->CPF;
         $regBook->idade = $request->idade;
-        $regBook->id_voo = $request->id_voo;
 
         if ($regBook->save()) {
             return response()->json([
