@@ -1,36 +1,47 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Editar Voos</h1>
-    
-    <form method="POST" action="{{ route('voo.update', $voo['id']) }}">
-        @csrf
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Editar Voo</h1>
+            </div>
 
-        <!-- 2025-05-05 14:23:45 -->
-        <!-- 'origem', 'destino', 'horario', 'portao_embarque' -->
+            <div class="card-body">
+                <form method="POST" action="{{ route('voo.update', $voo['id']) }}">
+                    @csrf
 
+                    <!-- Campo origem -->
+                    <div class="mb-3">
+                        <label for="origem" class="form-label">Origem</label>
+                        <input type="text" name="origem" class="form-control" value="{{ $voo['origem'] }}" required>
+                    </div>
 
-        <div class="mb-3">
-            <label>Origem</label>
-            <input type="text" name="origem" class="form-control" value="{{ $voo['origem'] }}" required>
+                    <!-- Campo destino -->
+                    <div class="mb-3">
+                        <label for="destino" class="form-label">Destino</label>
+                        <input type="text" name="destino" class="form-control" value="{{ $voo['destino'] }}" required>
+                    </div>
+
+                    <!-- Campo Hora -->
+                    <div class="mb-3">
+                        <label for='horario' class="form-label">Hora</label>
+                        <input type="text" name="horario" class="form-control" value="{{ $voo['horario'] }}" required>
+                    </div>
+
+                    <!-- Campo portão de embarque -->
+                    <div class="mb-3">
+                        <label for="protao_embarque" class="form-label">Portão de embarque</label>
+                        <input type="text" name="portao_embarque" class="form-control" value="{{ $voo['portao_embarque'] }}" required>
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <a href="{{ route('voo.index') }}" class="btn btn-secondary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
         </div>
-
-        <div class="mb-3">
-            <label>Destino</label>
-            <input type="text" name="destino" class="form-control" value="{{ $voo['destino'] }}" required>
-        </div>
-
-        <div class="mb-3">
-            <label>Hora</label>
-            <input type="text" name="horario" class="form-control" value="{{ $voo['horario'] }}" required>
-        </div>
-
-        <div class="mb-3">
-            <label>Portão de embarque</label>
-            <input type="text" name="portao_embarque" class="form-control" value="{{ $voo['portao_embarque'] }}" required>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Salvar</button>
-        <a href="{{ route('voo.index') }}" class="btn btn-secondary">Cancelar</a>
-    </form>
+    </div>
 @endsection
