@@ -6,6 +6,8 @@ php artisan serve --port=8001<br>
 endpoints web:<br>
 http://127.0.0.1:8000/voo
 http://127.0.0.1:8000/passageiro
+<br>
+<hr>
 
 
 
