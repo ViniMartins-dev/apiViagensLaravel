@@ -5,7 +5,8 @@
         <div class="card">
             <div class="card-header">
                 <h1>Lista de Voos</h1>
-                <a href="{{ route('voo.create') }}" class="btn btn-primary" >Cadastrar</a>
+                <a href="{{ route('voo.create') }}" class="btn btn-primary" >Cadastrar novo Voo</a>
+                <a href="http://127.0.0.1:8000/passageiro" class="btn btn-primary" >Ver Lista de Passageiros</a>
             </div>
 
             <div class="card-body">
